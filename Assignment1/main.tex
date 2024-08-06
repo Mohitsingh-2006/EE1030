@@ -1,0 +1,201 @@
+
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{CH-10\\ Function}
+\author{EE24BTECH11041-Mohit}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{flushleft}
+\fontsize{18}{20}\selectfont
+C: MCQs with One correct Answer
+\end{flushleft}
+20.Suppose $f(x)=f(x+1)^2 $ for x $\geq$ -1.If $g(x)$ is the   function whose graph is the reflection of the graph $f(x)$ with respect to the line y=x,then $g(x)$ equal
+\hfill(2002S)\\
+
+\begin{enumerate}
+    \item $-\sqrt{x}-1$,x$\geq$0
+    \item $\frac{1}{(x+1)^2},x>-1$
+    \item $\sqrt{x+1}$,x$\geq -1$
+    \item $\sqrt{x} -1,x\geq 0$
+\end{enumerate}
+21.Let function $f:R\rightarrow R$ be defined by $f(x)=2x + sinx$ for $x \in R$ ,then f is
+\hfill(2003S)\\
+\begin{enumerate}
+    \item one-to-one and onto
+    \item one-to-one but not onto
+    \item onto but not not onto
+    \item neither one-to-one nor onto
+\end{enumerate}
+22.If $f:[0,\infty) \rightarrow [0,\infty)$,and $f(x)=\cfrac{x}{1+x}$ then $f$ is
+\hfill(2003S)\\
+\begin{enumerate}
+    \item one-one and onto
+    \item one-one but not onto
+    \item onto but not one-one
+    \item neither one-one nor onto
+\end{enumerate}
+23.Domain of definition of the functions\\ $f(x)=\sqrt{\sin^{-1}(2x)+\frac{\pi}{6}}$ for real valued x,is
+\hfill(2003S)\\
+\begin{enumerate}
+    \item$\left[-\frac{1}{4},\frac{1}{2}\right]$\\
+    \item$\left[-\frac{1}{2},\frac{1}{2}\right]$\\
+    \item$\left(-\frac{1}{2},\frac{1}{9}\right)$\\
+    \item$\left[-\frac{1}{4},\frac{1}{4}\right]$
+\end{enumerate}
+24.Range of the function $f(x)=\frac{x^2+x+2}{x^2+x+1};x \in R$ is
+\hfill(2003S)\\
+\begin{enumerate}
+    \item $(1,\infty)$
+    \item $(1,\frac{11}{7}]$
+    \item $(1,\frac{7}{3}]$
+    \item $(1,\frac{7}{5}]$
+\end{enumerate}
+25. If $f(x)=x^2+2bx+2c^2$ and $g(x)=-x^2-2cx+b^2$ such that min $f(x)>max $g(x),then the relations between b and c,is
+\hfill(2003S)\\
+\begin{enumerate}
+    \item no real value of $b\& c$
+    \item $0<c<b\sqrt{2}$
+    \item $|c|<|b|\sqrt{2}$
+    \item $|c|>|b|\sqrt{2}$
+\end{enumerate}
+26.If the function $f(x)=sinx+cosx$,$g(x)=x^2-1$,then $g(f(X))$ is invertible in the domain 
+\hfill(2004S)
+\begin{enumerate}
+    \item $\left[0,\frac{\pi}{2}\right]$\\
+    \item $\left[-\frac{\pi}{4},\frac{\pi}{4}\right]$\\
+    \item $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$\\
+    \item $[0,\pi]$
+\end{enumerate}
+27.If the function $f(x)$ and $g(x)$ are defined on $R \rightarrow R $ such that \\$f(x)=$
+\hfill(2005S)\\
+$ \begin{cases}
+    0, x \in rational\\
+    x, x \in irrational 
+\end{cases} $ \\
+    $g(x)=$
+$\begin{cases}
+    0,x \in rational\\
+    x,x \in irratoinal
+\end{cases}$
+then $(f-g)(x)$ is 
+\begin{enumerate}
+    \item one-one \& onto 
+    \item neither one-one nor onto
+    \item one-one but not onto 
+    \item onto but not one-one
+\end{enumerate}
+28. X and Y are two sets and $f:X\rightarrow Y$.If $ \{f(c)=y;c \subset X,y \subset Y\} $ and $ \{f^{-1}(d)=X;d \subset Y,x \subset X \} $,then the true statement is 
+\hfill(2005S)\\
+\begin{enumerate}
+    \item $f(f^{-1}(b))=b$
+    \item $f^{-1}(f(a))=a$
+    \item $f(f^{-1}(b))=b,b \subset y$
+    \item $f^{-1}(f(a))=a,a \subset x$
+\end{enumerate}
+29.If $F(x)=\left( f\left( \frac{x}{2}\right) \right)^2 + \left(g\left (\frac{x}{2}\right) \right)^2$ where $f"(x)=-f(x)$ and $ g(x)=f'(x)$ and given that $F(5)=5$,then $F(10)$ is equal to 
+\hfill(2006,-3M,-1)
+\begin{enumerate}
+    \item 5
+    \item 10
+    \item 0
+    \item 15
+\end{enumerate}
+30.Let $f(x)=\frac{x}{(1+x^n)^\frac{1}{n}}$ for $ n\geq2$ and $g(x)= \underbrace {(fofo...of)(x)}_{\text{ f occurs n times}}$.Then $\int x^{n-2} g(x)dx$ equals.
+\hfill(2007-3 marks)\\
+\begin{enumerate}
+    \item$ \frac{1}{n(n-1)} (1+nx^n)^{1-\frac{1}{n}} $
+    \item$ \frac{1}{n-1} (1+nx^n)^{1-\frac{1}{n}} $
+    \item$ \frac{1}{n+1} (1+nx^n)^{1+\frac{1}{n}} $
+    \item$ \frac{1}{n+1} (1+nx^n)^{1+\frac{1}{n}} $
+\end{enumerate}
+31. Let f,g and h be real-valued functions defined on the interval [0,1] by $f(X)= e^{x^2} + e^{-x^2}$,$g(x)=xe^{x^2}+ e^{-x^2}$ and $h(x)=x^2e^{-x^2}$ .If a,b and c denote,respectively,the absolute maximum of $f,g$ and $h$ on [0,1],then 
+\hfill(2010)
+\begin{enumerate}
+    \item $a=b$ and $b\neq c$
+    \item $a=c$ and $a\neq b$
+    \item $a\neq b$ and $c \neq b$
+    \item $a=b=c$
+\end{enumerate}
+32.Let$f(x)=x^2$ and $g(x)=sinx$ for all $x\in R$ .Then the set of all $x$ satisfying $(fogogof)(x)=(gogof)(x)$,where $(fog)(x)=f(g(x))$,is
+\hfill(2011)
+\begin{enumerate}
+    \item $ \pm \sqrt{n\pi},n\in \{0,1,2....\}$
+    \item $ \pm \sqrt{n\pi},n\in \{1,2,....\}$
+    \item $ \frac{\pi}{2}+2n\pi,n \in\{...-2,-1,0,1,2...\} $
+    \item $ 2n\pi,n\in \{...-2,-1,0,1,2...\}$
+\end{enumerate}
+33.The function $ f:[0,3] \rightarrow [1,29] $, defined by $ f(x)=2x^3-15x^2+39x+1 $,is 
+\begin{enumerate}
+    \item one-one and onto 
+    \item onto bit not one-one 
+    \item one-one but not onto
+    \item neither one-one nor onto
+\end{enumerate}
+\begin{flushleft}
+    \fontsize{18}{20}\selectfont
+D: MCQs with One or More than One Correct
+\end{flushleft}
+1.If $y=f(x)=\frac{x+2}{x-1}$ then
+\hfill(2008S)
+\begin{enumerate}
+    \item $x=f(y)$
+    \item $f(1)=3$
+    \item $y$ increase with $x$ for $x<1$
+    \item $f$ is a rational function on $x$
+\end{enumerate}
+\end{document}

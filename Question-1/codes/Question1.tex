@@ -1,5 +1,4 @@
 
-
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
@@ -51,41 +50,47 @@
 % \bigskip
 {\let\newpage\relax\maketitle}
 \begin{enumerate}
-	\item Let $\vec{A}\brak{4,2}$,$\vec{B}\brak{6,5}$ and $\vec{C}\brak{1,4}$ be the vertices of $\Delta$$ABC$.Find the coordinates of points Q and R on medians $BE$ and $CF$ respectively such that $BQ:QE=2:1$ and $CR:RF=2:1$.
+	\item Let $\vec{A}\brak{4,2}$,$\vec{B}\brak{6,5}$ and $\vec{C}\brak{1,4}$ be the vertices of $\Delta$ $ABC$.Find the coordinates of points $\vec{Q}$ and $\vec{R}$ on medians $BE$ and $CF$ respectively such that $BQ:QE=2:1$ and $CR:RF=2:1$.
 \end{enumerate}
+\begin{table}[h!]    
+  \centering
+  \input{table(1)}
+  \caption{Variables Used}
+  \label{tab10.5.3.9.1}
+\end{table}
 Solution:-\\
-$F$ is the mid point of $AB$\\
+$\vec{F}$ is the mid point of $AB$\\
 \begin{align*}
-F=\frac{A+B}{2}=\frac{\myvec{4\\2} + \myvec{6\\5}}{2}
+	\vec{F}=\frac{A+B}{2}=\frac{\myvec{4\\2} + \myvec{6\\5}}{2}
 =\myvec{5\\ \frac{7}{2}}
 \end{align*}
-$E$ is the mid point of $AC$\\
+$\vec{E}$ is the mid point of $AC$\\
 \begin{align*}
-E=\frac{A+C}{2}==\frac{\myvec{4\\2} + \myvec{1\\4}}{2}
+	\vec{E}=\frac{A+C}{2}==\frac{\myvec{4\\2} + \myvec{1\\4}}{2}
 =\myvec{\frac{5}{2}\\3}
 \end{align*}
 By section formula,
 \begin{align*}
-    R=\frac{B+KA}{1+K}
+	\vec{R}=\frac{B+KA}{1+K}
 \end{align*}
 It is given that $\frac{BQ}{QE}=\frac{2}{1}$\\
 So,\\
 \begin{align*}
-    Q=\frac{B+2E}{1+2}=\frac{\myvec{6\\5} + 2\myvec{\frac{5}{2}\\3}}{3}=\myvec{\frac{11}{3}\\ \frac{11}{3}}
+	\vec{Q}=\frac{B+2E}{1+2}=\frac{\myvec{6\\5} + 2\myvec{\frac{5}{2}\\3}}{3}=\myvec{\frac{11}{3}\\ \frac{11}{3}}
 \end{align*}
 It is given that $\frac{CR}{RF}=\frac{2}{1}$\\
 So,\\
 \begin{align*}
-    R=\frac{C+2F}{1+2}=\frac{\myvec{1\\4} + 2\myvec{5\\\frac{7}{2}}}{3}=\myvec{\frac{11}{3}\\ \frac{11}{3}}
+	\vec{R}=\frac{C+2F}{1+2}=\frac{\myvec{1\\4} + 2\myvec{5\\\frac{7}{2}}}{3}=\myvec{\frac{11}{3}\\ \frac{11}{3}}
 \end{align*}
-Hence, Co-ordinates of $Q$ and $R$ are\\
+Hence, Co-ordinates of $\vec{Q}$ and $\vec{R}$ are\\
 \begin{align*}
     \vec{Q}\brak{\frac{11}{3},\frac{11}{3}} \text{and}\ \vec{R}\brak{\frac{11}{3},\frac{11}{3}}
 \end{align*}
 \begin{figure}[h!]
    \centering
    \includegraphics[width=0.7\linewidth]{Figure_1.png}
-   \caption{Stem Plot of y\brak{n}}
+   \caption{Plot of Triangle $ABC$}
    \label{stemplot}
 \end{figure}
 \end{document}

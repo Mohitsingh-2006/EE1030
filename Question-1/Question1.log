@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  23 AUG 2024 08:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  24 AUG 2024 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1890,7 +1890,13 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-) (./table(1).tex)
+)
+(./tables/table(1).tex)
+Overfull \hbox (19.49411pt too wide) in paragraph at lines 1--58
+ [][] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
@@ -1930,9 +1936,9 @@ Package rerunfilecheck Info: File `Question1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49764 strings out of 478287
- 1164314 string characters out of 5849290
- 1639655 words of memory out of 5000000
+ 49765 strings out of 478287
+ 1164356 string characters out of 5849290
+ 1641655 words of memory out of 5000000
  67136 multiletter control sequences out of 15000+600000
  534473 words of font info for 161 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1943,7 +1949,7 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Question1.pdf (2 pages, 66624 bytes).
+Output written on Question1.pdf (2 pages, 67180 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream

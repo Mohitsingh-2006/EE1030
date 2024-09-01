@@ -1,0 +1,2 @@
+The coordinates of point Q on median BE are: (3.67, 3.67)
+The coordinates of point R on median CF are: (3.67, 3.67)

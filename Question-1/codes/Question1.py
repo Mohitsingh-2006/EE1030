@@ -1,8 +1,8 @@
-#Code by GVV Sharma
-#September 12, 2023
-#released under GNU GPL
-#Medians of a triangle
-#Centroid
+# Code by GVV Sharma
+# September 12, 2023
+# Released under GNU GPL
+# Medians of a triangle
+# Centroid
 
 import numpy as np
 import numpy.linalg as LA
@@ -64,9 +64,9 @@ plt.plot(x_AD[0,:], x_AD[1,:], label='$AD$')
 plt.plot(x_BE[0,:], x_BE[1,:], label='$BE$')
 plt.plot(x_CF[0,:], x_CF[1,:], label='$CF$')
 
-# Plotting the points A, B, C, G, Q, R
-points = np.hstack((A, B, C, G, Q, R))
-labels = ['A', 'B', 'C', 'G', 'Q', 'R']
+# Plotting the points A, B, C, G, Q, R, E, F
+points = np.hstack((A, B, C, G, Q, R, E, F))
+labels = ['A', 'B', 'C', 'G', 'Q', 'R', 'E', 'F']
 
 plt.scatter(points[0,:], points[1,:])
 for i, label in enumerate(labels):
@@ -84,8 +84,4 @@ plt.axis('equal')
 
 # Uncomment the following line to display the plot
 plt.show()
-
-# If using termux
-# plt.savefig('figs/triangle/medians_with_Q_R.pdf')
-# subprocess.run(shlex.split("termux-open figs/triangle/medians_with_Q_R.pdf"))
 

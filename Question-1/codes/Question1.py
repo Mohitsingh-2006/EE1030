@@ -1,87 +1,69 @@
-# Code by GVV Sharma
-# September 12, 2023
-# Released under GNU GPL
-# Medians of a triangle
-# Centroid
-
-import numpy as np
-import numpy.linalg as LA
+import ctypes
 import matplotlib.pyplot as plt
 
-# Function to generate a line segment between two points
-def line_gen(A, B):
-    len = 100
-    dim = A.shape[0]
-    x_AB = np.zeros((dim, len))
-    lam_1 = np.linspace(0, 1, len)
-    for i in range(len):
-        temp1 = A + lam_1[i] * (B - A)
-        x_AB[:, i] = temp1.T
-    return x_AB
+# Load the shared library
+lib = ctypes.CDLL('./libsection_formula.so')
 
-# Function to calculate the normal vector to the line passing through two points
-def norm_vec(A, B):
-    return np.array([A[1] - B[1], B[0] - A[0]])
+# Define the argument and return types for the C function
+lib.find_section_point.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
+lib.find_section_point.restype = None
 
-# Function to find the intersection of two lines given by their normal vectors and points
-def line_intersect(n1, A, n2, B):
-    N = np.vstack((n1.T, n2.T))
-    p = np.array([n1.T @ A, n2.T @ B])
-    return np.linalg.solve(N, p)
+def find_section_point(x1, y1, x2, y2, m, n):
+    x = ctypes.c_double()
+    y = ctypes.c_double()
+    lib.find_section_point(x1, y1, x2, y2, m, n, ctypes.byref(x), ctypes.byref(y))
+    return (x.value, y.value)
 
-# Triangle vertices
-A = np.array([4, 2]).reshape(-1,1)
-B = np.array([6, 5]).reshape(-1,1) 
-C = np.array([1, 4]).reshape(-1,1) 
+# Given points
+A = (4, 2)
+B = (6, 5)
+C = (1, 4)
 
-# Midpoints of sides opposite to the vertices
-D = (B + C) / 2
-E = (C + A) / 2
-F = (A + B) / 2
+# Midpoints of medians (E and F)
+E = ((A[0] + C[0]) / 2, (A[1] + C[1]) / 2)
+F = ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
 
-# Centroid G (intersection of medians)
-G = (A + B + C) / 3
+# Find Q on BE such that BQ : QE = 2 : 1
+Q = find_section_point(B[0], B[1], E[0], E[1], 2, 1)
 
-# Calculate the coordinates of points Q and R
-# For BQ : QE = 2 : 1
-Q = (2 * E + B) / 3
-# For CR : RF = 2 : 1
-R = (2 * F + C) / 3
+# Find R on CF such that CR : RF = 2 : 1
+R = find_section_point(C[0], C[1], F[0], F[1], 2, 1)
 
-# Generating all lines
-x_AD = line_gen(A, D)
-x_BE = line_gen(B, E)
-x_CF = line_gen(C, F)
-x_AB = line_gen(A, B)
-x_BC = line_gen(B, C)
-x_CA = line_gen(C, A)
+# Format the results to 2 decimal places
+Q_formatted = (round(Q[0], 2), round(Q[1], 2))
+R_formatted = (round(R[0], 2), round(R[1], 2))
 
-# Plotting all lines
-plt.plot(x_AB[0,:], x_AB[1,:], label='$AB$')
-plt.plot(x_BC[0,:], x_BC[1,:], label='$BC$')
-plt.plot(x_CA[0,:], x_CA[1,:], label='$CA$')
-plt.plot(x_AD[0,:], x_AD[1,:], label='$AD$')
-plt.plot(x_BE[0,:], x_BE[1,:], label='$BE$')
-plt.plot(x_CF[0,:], x_CF[1,:], label='$CF$')
+# Print results with 2 decimal precision
+print(f"Q: {Q_formatted}")
+print(f"R: {R_formatted}")
 
-# Plotting the points A, B, C, G, Q, R, E, F
-points = np.hstack((A, B, C, G, Q, R, E, F))
-labels = ['A', 'B', 'C', 'G', 'Q', 'R', 'E', 'F']
+# Plotting
+plt.figure(figsize=(8, 8))
 
-plt.scatter(points[0,:], points[1,:])
-for i, label in enumerate(labels):
-    plt.annotate(label, 
-                 (points[0,i], points[1,i]), 
-                 textcoords="offset points", 
-                 xytext=(0,10), 
-                 ha='center')
+# Plot the triangle
+plt.plot([A[0], B[0]], [A[1], B[1]], 'ro-', label='AB')
+plt.plot([B[0], C[0]], [B[1], C[1]], 'go-', label='BC')
+plt.plot([C[0], A[0]], [C[1], A[1]], 'bo-', label='CA')
 
-plt.xlabel('$x$')
-plt.ylabel('$y$')
-plt.legend(loc='best')
-plt.grid()
-plt.axis('equal')
+# Plot the medians
+plt.plot([B[0], E[0]], [B[1], E[1]], 'r--', label='BE')
+plt.plot([C[0], F[0]], [C[1], F[1]], 'g--', label='CF')
 
-# Uncomment the following line to display the plot
+# Plot Q and R
+plt.plot(*Q_formatted, 'ko', label='Q', markersize=8)
+plt.plot(*R_formatted, 'ko', label='R', markersize=8)
+
+# Annotate points
+plt.text(*Q_formatted, f' Q {Q_formatted}', fontsize=12, ha='right', color='black')
+plt.text(*R_formatted, f' R {R_formatted}', fontsize=12, ha='left', color='black')
+plt.text(A[0], A[1], 'A', fontsize=12, ha='right')
+plt.text(B[0], B[1], 'B', fontsize=12, ha='right')
+plt.text(C[0], C[1], 'C', fontsize=12, ha='right')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Triangle ABC with Medians and Points Q and R')
+plt.legend()
+plt.grid(True)
+plt.gca().set_aspect('equal', adjustable='box')
 plt.show()
-

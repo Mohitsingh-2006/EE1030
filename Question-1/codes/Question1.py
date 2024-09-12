@@ -1,69 +1,92 @@
-import ctypes
+#Code by GVV Sharma
+#September 12, 2023
+#released under GNU GPL
+#Medians of a triangle
+#Centroid
+#for path to external scripts
+
+import numpy as np
+import numpy.linalg as LA
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
-# Load the shared library
-lib = ctypes.CDLL('./libsection_formula.so')
+#local imports
+from line.funcs import *
+from triangle.funcs import *
+from conics.funcs import circ_gen
 
-# Define the argument and return types for the C function
-lib.find_section_point.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
-lib.find_section_point.restype = None
+#if using termux
+import subprocess
+import shlex
+#end if
 
-def find_section_point(x1, y1, x2, y2, m, n):
-    x = ctypes.c_double()
-    y = ctypes.c_double()
-    lib.find_section_point(x1, y1, x2, y2, m, n, ctypes.byref(x), ctypes.byref(y))
-    return (x.value, y.value)
+# Triangle vertices
+A = np.array([4,2]).reshape(-1,1)
+B = np.array([6,5]).reshape(-1,1)
+C = np.array([1,4]).reshape(-1,1)
 
-# Given points
-A = (4, 2)
-B = (6, 5)
-C = (1, 4)
+# Triangle midpoints
+E = (C + A) / 2  # Midpoint of CA
+F = (A + B) / 2  # Midpoint of AB
+#print(E,F)
 
-# Midpoints of medians (E and F)
-E = ((A[0] + C[0]) / 2, (A[1] + C[1]) / 2)
-F = ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
+# Median parameters
+n1 = norm_vec(A, E)
+c1 = n1.T @ A
+n2 = norm_vec(B, F)
+c2 = n2.T @ B
 
-# Find Q on BE such that BQ : QE = 2 : 1
-Q = find_section_point(B[0], B[1], E[0], E[1], 2, 1)
+# Intersecton of BE and CF (Centroid G)
+G = line_intersect(n1, A, n2, B)
 
-# Find R on CF such that CR : RF = 2 : 1
-R = find_section_point(C[0], C[1], F[0], F[1], 2, 1)
+# Point division on medians BE and CF
+def divide_point(P, Q, m, n):
+    return (n * P + m * Q) / (m + n)
 
-# Format the results to 2 decimal places
-Q_formatted = (round(Q[0], 2), round(Q[1], 2))
-R_formatted = (round(R[0], 2), round(R[1], 2))
+# Points Q and R on medians BE and CF such that BQ:QE = 2:1 and CR:RF = 2:1
+Q = divide_point(B, E, 2, 1)  # BQ : QE = 2 : 1
+R = divide_point(C, F, 2, 1)  # CR : RF = 2 : 1
+print("Coordinates of Q:", Q)
+print("Coordinates of R:", R)
 
-# Print results with 2 decimal precision
-print(f"Q: {Q_formatted}")
-print(f"R: {R_formatted}")
+# Collinearity check (for validation)
+mat = np.block([[1, 1, 1], [A, G, E]]).T
+print("Matrix rank check (for collinearity):", LA.matrix_rank(mat))
 
-# Plotting
-plt.figure(figsize=(8, 8))
+# Generating lines for plotting
+x_AB = line_gen(A, B)
+x_BC = line_gen(B, C)
+x_CA = line_gen(C, A)
+x_BE = line_gen(B, E)
+x_CF = line_gen(C, F)
 
-# Plot the triangle
-plt.plot([A[0], B[0]], [A[1], B[1]], 'ro-', label='AB')
-plt.plot([B[0], C[0]], [B[1], C[1]], 'go-', label='BC')
-plt.plot([C[0], A[0]], [C[1], A[1]], 'bo-', label='CA')
+# Plotting all lines
+plt.plot(x_AB[0,:], x_AB[1,:], label='$AB$')
+plt.plot(x_BC[0,:], x_BC[1,:], label='$BC$')
+plt.plot(x_CA[0,:], x_CA[1,:], label='$CA$')
+plt.plot(x_BE[0,:], x_BE[1,:], label='$BE$')
+plt.plot(x_CF[0,:], x_CF[1,:], label='$CF$')
 
-# Plot the medians
-plt.plot([B[0], E[0]], [B[1], E[1]], 'r--', label='BE')
-plt.plot([C[0], F[0]], [C[1], F[1]], 'g--', label='CF')
+# Labeling the coordinates
+tri_coords = np.block([[A, B, C, Q, R, E, F]])
+plt.scatter(tri_coords[0,:], tri_coords[1,:])
+vert_labels = ['A', 'B', 'C', 'Q', 'R','E','F']
+for i, txt in enumerate(vert_labels):
+    plt.annotate(txt,  # this is the text
+                 (tri_coords[0,i], tri_coords[1,i]),  # this is the point to label
+                 textcoords="offset points",  # how to position the text
+                 xytext=(0,10),  # distance from text to points (x,y)
+                 ha='center')  # horizontal alignment
 
-# Plot Q and R
-plt.plot(*Q_formatted, 'ko', label='Q', markersize=8)
-plt.plot(*R_formatted, 'ko', label='R', markersize=8)
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.legend(loc='best')
+plt.grid()  # minor
+plt.axis('equal')
 
-# Annotate points
-plt.text(*Q_formatted, f' Q {Q_formatted}', fontsize=12, ha='right', color='black')
-plt.text(*R_formatted, f' R {R_formatted}', fontsize=12, ha='left', color='black')
-plt.text(A[0], A[1], 'A', fontsize=12, ha='right')
-plt.text(B[0], B[1], 'B', fontsize=12, ha='right')
-plt.text(C[0], C[1], 'C', fontsize=12, ha='right')
-
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('Triangle ABC with Medians and Points Q and R')
-plt.legend()
-plt.grid(True)
-plt.gca().set_aspect('equal', adjustable='box')
+#if using termux
+plt.savefig('../figs/median_Q_R.pdf')
+#subprocess.run(shlex.split("termux-open figs/triangle/median_Q_R.pdf"))
+#else
 plt.show()
+

@@ -1,66 +1,90 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Load data from file 'values.dat' (assuming each line contains coordinates x, y)
-f = open("values.dat", "r")
-data = np.loadtxt(f,skiprows=1)
+# Function to calculate a point that divides a line segment in a given ratio
+def divide_line(P, Q, m, n):
+    x = (m * Q[0] + n * P[0]) / (m + n)
+    y = (m * Q[1] + n * P[1]) / (m + n)
+    return np.array([x, y]).reshape(-1,1)
 
-# Assign points A, B, C from the file
-A = data[0]  # First row is A
-B = data[1]  # Second row is B
-C = data[2]  # Third row is C
+# Read points from 'lines.dat' using np.loadtxt
+f = open("lines.dat", "r")
+lines = np.loadtxt(f)
 
-# Midpoints of sides AC and AB
-E = (A + C) / 2
-F = (A + B) / 2
+# Initialize arrays for line segments with 11 points each
+x_AB = np.zeros((2, 11))
+x_BC = np.zeros((2, 11))
+x_CA = np.zeros((2, 11))
+x_BE = np.zeros((2, 11))
+x_CF = np.zeros((2, 11))
 
-# Points Q and R on the medians, dividing in the ratio 2:1
-# BQ:QE = 2:1, Q = (2E + B) / 3
-Q = (2*E + B) / 3
+# Fill in the arrays with points from the file
+x_AB[0,:] = lines[:, 0]
+x_AB[1,:] = lines[:, 1]
+x_BC[0,:] = lines[:, 2]
+x_BC[1,:] = lines[:, 3]
+x_CA[0,:] = lines[:, 4]
+x_CA[1,:] = lines[:, 5]
+x_BE[0,:] = lines[:, 6]
+x_BE[1,:] = lines[:, 7]
+x_CF[0,:] = lines[:, 8]
+x_CF[1,:] = lines[:, 9]
 
-# CR:RF = 2:1, R = (2F + C) / 3
-R = (2*F + C) / 3
+# Extract points A, B, C, E, and F
+A = np.array([x_AB[0,0], x_AB[1,0]]).reshape(-1,1)
+B = np.array([x_AB[0,-1], x_AB[1,-1]]).reshape(-1,1)
+C = np.array([x_BC[0,-1], x_BC[1,-1]]).reshape(-1,1)
+E = np.array([x_BE[0,-1], x_BE[1,-1]]).reshape(-1,1)
+F = np.array([x_CF[0,-1], x_CF[1,-1]]).reshape(-1,1)
 
-# Data for plotting
-x_vals = np.array([A[0], B[0], C[0], A[0]])  # Close the triangle
-y_vals = np.array([A[1], B[1], C[1], A[1]])
+# Calculate points Q and R dividing the medians in the ratio 2:1
+Q = divide_line(B, E, 2, 1)
+R = divide_line(C, F, 2, 1)
 
-# Plot the triangle
-plt.plot(x_vals, y_vals, label="Triangle ABC")
+# Plot the figure
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+# Plot the triangle and medians
+plt.plot(x_AB[0,:], x_AB[1,:], label='$AB$', color='r')  # Line AB
+plt.plot(x_BC[0,:], x_BC[1,:], label='$BC$', color='g')  # Line BC
+plt.plot(x_CA[0,:], x_CA[1,:], label='$CA$', color='b')  # Line CA
 
 # Plot medians BE and CF
-plt.plot([B[0], E[0]], [B[1], E[1]], linestyle='--', label="Median BE")
-plt.plot([C[0], F[0]], [C[1], F[1]], linestyle='--', label="Median CF")
+plt.plot(x_BE[0,:], x_BE[1,:], '--', label='$BE$', color='m')
+plt.plot(x_CF[0,:], x_CF[1,:], '--', label='$CF$', color='c')
 
-# Plot points A, B, C, E, F, Q, R
-plt.scatter(*A, color='red', label=f'A {A}')
-plt.scatter(*B, color='green', label=f'B {B}')
-plt.scatter(*C, color='blue', label=f'C {C}')
-plt.scatter(*E, color='purple', label=f'E {E}')
-plt.scatter(*F, color='orange', label=f'F {F}')
-plt.scatter(*Q, color='cyan', label=f'Q {Q.round(2)}')
-plt.scatter(*R, color='magenta', label=f'R {R.round(2)}')
+# Plot the points Q and R
+plt.scatter(Q[0], Q[1], color='k', label='Point Q (2:1 on BE)')
+plt.scatter(R[0], R[1], color='k', label='Point R (2:1 on CF)')
 
-# Annotating the points
-plt.text(A[0]+0.1, A[1], 'A', fontsize=12)
-plt.text(B[0]+0.1, B[1], 'B', fontsize=12)
-plt.text(C[0]+0.1, C[1], 'C', fontsize=12)
-plt.text(E[0]+0.1, E[1], 'E', fontsize=12)
-plt.text(F[0]+0.1, F[1], 'F', fontsize=12)
-plt.text(Q[0]+0.1, Q[1], 'Q', fontsize=12)
-plt.text(R[0]+0.1, R[1], 'R', fontsize=12)
+# Label the points
+tri_coords = np.hstack((A, B, C, Q, R, E, F))
+vert_labels = ['A', 'B', 'C', 'Q', 'R', 'E', 'F']
+for i, txt in enumerate(vert_labels):
+    plt.annotate(f'{txt}\n({tri_coords[0,i]:.2f}, {tri_coords[1,i]:.2f})', 
+                 (tri_coords[0,i], tri_coords[1,i]), textcoords="offset points", 
+                 xytext=(0,5), ha='center')
 
-# Axis labels and title
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Triangle ABC with Medians BE and CF and Points Q, R')
+# Adding x and y axis arrows
+plt.arrow(0, 0, 8, 0, width=0.005, length_includes_head=True, 
+          head_width=0.3, overhang=0.5)
+plt.arrow(0, 0, 0, 8, width=0.005, length_includes_head=True, 
+          head_width=0.3, overhang=0.5)
 
-# Display grid, legend, and equal scaling
-plt.grid(True)
-plt.legend()
+# Set the axis limits to zoom into the first quadrant with x and y ranges from 0 to 8
+plt.xlim(0, 8)
+plt.ylim(0, 8)
+
+# Set axes, grid, and legend
+plt.legend(loc='upper left')
+plt.grid()
 plt.axis('equal')
 
 # Save and show the plot
-plt.savefig('triangle_plot_from_file.png')
+plt.savefig('Figure_1.png')
 plt.show()
+
+# Close the file
+f.close()
 

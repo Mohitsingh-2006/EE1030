@@ -77,7 +77,20 @@ c
 },
 \vec{m} = \myvec{1 \\ m}
 \end{align}
-x-coordinate of point of intersection are 
+Substituing the line equation in parabola equation gives the values of $\kappa$
+\begin{align}
+\brak{\vec{h}+\kappa\vec{m}}^\top\vec{V}\brak{\vec{h}+\kappa\vec{m}} + 2\vec{u}^\top\brak{\vec{h}+\kappa\vec{m}} + f &= 0\\
+\brak{\myvec{0\\c}+\kappa\myvec{1\\m}}^\top\myvec{0 & 0\\0 & 1}\brak{\myvec{0\\c}+\kappa\myvec{1\\m}} + 2\myvec{0\\-\frac{1}{2}}^\top\brak{\myvec{0\\c}+\kappa\myvec{1\\m}} + 0 &= 0\\
+\myvec{1&c+km}\myvec{0&0\\0&1}\myvec{1\\c+km}+\myvec{0&-1}\myvec{1\\c+km} &= 0\\
+\myvec{0&c+km}\myvec{1\\c+km}-\brak{c+km} &= 0\\
+\brak{c+km}\brak{\brak{c+km}-1}=0\\
+k=-\frac{c}{m},\frac{1-c}{m}\\
+\end{align}
+Putting in equation of line \\
+\begin{align}
+\vec{x}=\vec{h}+k\vec{m}\\
+\end{align}
+We will get x-coordinate of point of intersection are 
 \begin{align}
     x_1=\frac{m-\sqrt{m^2+4c}}{2},x_2=\frac{m+\sqrt{m^2+4c}}{2}
 \end{align}

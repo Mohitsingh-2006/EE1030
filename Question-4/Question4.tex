@@ -62,7 +62,7 @@ If the area of the region bounded by the line $y=mx+c$ and the curve $x^2=y$ is 
 	
 The parameters of the given conic are
 \begin{align}
-\vec{V}=\myvec{
+V=\myvec{
 1 & 0\\
 0 & 0
 },
@@ -79,7 +79,7 @@ c
 \end{align}
 Substituing the line equation in parabola equation gives the values of $\kappa$
 \begin{align}
-\brak{\vec{h}+\kappa\vec{m}}^\top\vec{V}\brak{\vec{h}+\kappa\vec{m}} + 2\vec{u}^\top\brak{\vec{h}+\kappa\vec{m}} + f &= 0\\
+\brak{\vec{h}+\kappa\vec{m}}^\top V \brak{\vec{h}+\kappa\vec{m}} + 2\vec{u}^\top\brak{\vec{h}+\kappa\vec{m}} + f &= 0\\
 \brak{\myvec{0\\c}+\kappa\myvec{1\\m}}^\top\myvec{0 & 0\\0 & 1}\brak{\myvec{0\\c}+\kappa\myvec{1\\m}} + 2\myvec{0\\-\frac{1}{2}}^\top\brak{\myvec{0\\c}+\kappa\myvec{1\\m}} + 0 &= 0\\
 \myvec{1&c+km}\myvec{0&0\\0&1}\myvec{1\\c+km}+\myvec{0&-1}\myvec{1\\c+km} &= 0\\
 \myvec{0&c+km}\myvec{1\\c+km}-\brak{c+km} &= 0\\
@@ -88,7 +88,13 @@ k=-\frac{c}{m},\frac{1-c}{m}\\
 \end{align}
 Putting in equation of line \\
 \begin{align}
-\vec{x}=\vec{h}+k\vec{m}\\
+\vec{x}=\vec{h}+k\vec{m}
+\end{align}
+\begin{align}
+\vec{x_1}=\myvec{\frac{m-\sqrt{m^2+4c}}{2} \\ m\brak{\frac{m-\sqrt{m^2+4c}}{2} +c}}
+\end{align}
+\begin{align}
+\vec{x_2}=\myvec{\frac{m+\sqrt{m^2+4c}}{2} \\ m\brak{\frac{m+\sqrt{m^2+4c}}{2} +c}}
 \end{align}
 We will get x-coordinate of point of intersection are 
 \begin{align}

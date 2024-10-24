@@ -1,0 +1,13 @@
+real function print_value(x)
+real :: x , sum , term
+integer :: i
+i = 0
+sum = 2.0
+term = 1.0
+do while (term > 0.00001)
+    term = x * term/(i+1)
+    sum = sum + term
+    i = i + 1
+end do
+print_value = sum
+end

@@ -1,0 +1,292 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+% Marks the beginning of the document
+\begin{document}
+\title{gate 2}
+\author{EE24Btech11041 - Mohit}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+\textbf{Q.1 - Q.25 carry one mark each}
+\begin{enumerate}
+\item Consider an anti-symmetric tensor $P_{ij}$ with the indices $i$ and $j$ running from 1 to 5. The number of independent components of the tensor is 
+\hfill{(PH 2010)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 3
+\item 10
+\item 9 
+\item 6
+\end{enumerate}
+\end{multicols}
+\item The value of the integral $\int_{c} \frac {e^z \sin{z}}{z^2}dz$, where the contour $C$ is the unit circle:
+$\abs{z-2}=1$, is
+
+\hfill{(PH 2010)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $2\pi i$
+\item $4\pi i$
+\item $\pi i$
+\item 0
+\end{enumerate}
+\end{multicols}
+
+\item The eigenvalues of the matrix \myvec{
+2 & 3 & 0 \\
+3 & 2 & 0 \\
+0 & 0 & 1 \\
+}
+are 
+\hfill{(PH 2010)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 5,2,-2
+\item -5,-1,-1
+\item 5,1,-1
+\item -5,1,1
+\end{enumerate}
+\end{multicols}
+\item If 
+$f(x) =$ 
+$\begin{cases} 
+0 \quad for \quad x < 3, \\ 
+x - 3 \quad for \quad x \geq 3, 
+\end{cases}$
+
+then the Laplace transform of $f(x)$ is 
+
+\hfill{(PH 2010)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $s^{-2}e^{3x}$
+\item $s^{2}e^{-3x}$
+\item $s^{-2}$ 
+\item $s^{-2}e^{-3x}$
+\end{enumerate}
+\end{multicols}
+
+\item The valence electrons do not directly determine the following property of a metal. 
+
+\hfill{(PH 2010)}
+\begin{enumerate}
+\item Electrical conductivity
+\item Thermal conductivity
+\item Shear modulus
+\item Metallic lustre
+\end{enumerate}
+
+
+\item Consider X-ray diffraction from a crystal with a face-centered-cubic (fcc) lattice. The lattice plane for which there is NO diffraction peak is 
+
+\hfill{(PH 2010)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item (2, 1, 2)
+\item (1, 1, 1)
+\item (2, 0, 0)
+\item (3, 1, 1)
+\end{enumerate}
+\end{multicols}
+
+
+\item The Hall coefficient, $R_H$, of sodium depends on 
+
+\hfill{(PH 2010)}
+
+\begin{enumerate}
+\item The effective charge carrier mass and carrier density 
+\item The charge carrier density and relaxation time
+\item The charge carrier density only 
+\item The effective charge carrier mass
+\end{enumerate}
+
+
+\item The Bloch theorem states that within a crystal, the wavefunction, $\psi(\vec{r})$, of an electron has the form 
+
+\hfill{(PH 2010)}
+
+\begin{enumerate}
+\item $\psi(\vec{r}) = u(\vec{r}) e^{i \vec{k} \cdot \vec{r}}$ where $u(\vec{r})$ is an arbitrary function and $\vec{k}$ is an arbitrary vector 
+\item $\psi(\vec{r}) = u(\vec{r}) e^{i \vec{G} \cdot \vec{r}}$ where $u(\vec{r})$ is an arbitrary function and $\vec{G}$ is a reciprocal lattice vector 
+\item $\psi(\vec{r}) = u(\vec{r} + \vec{\Lambda}) e^{i \vec{G} \cdot \vec{r}}$ where $u(\vec{r}) = u(\vec{r} + \vec{\Lambda})$, $\vec{\Lambda}$ is a lattice vector and $\vec{G}$ is a reciprocal lattice vector 
+\item $\psi(\vec{r}) = u(\vec{r} + \vec{\Lambda}) e^{i \vec{k} \cdot \vec{r}}$ where $u(\vec{r}) = u(\vec{r} + \vec{\Lambda})$, $\vec{\Lambda}$ is a lattice vector and $\vec{k}$ is an arbitrary vector
+\end{enumerate}
+
+
+\item In an experiment involving a ferromagnetic medium, the following observations were made. Which one of the plots does NOT correctly represent the property of the medium? ($T_c$ is the Curie temperature) 
+
+\hfill{(PH 2010)}
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item {\scalebox{0.4}{\begin{tikzpicture}
+\tikzstyle{every node}=[font=\small]
+\draw [short] (7.75,7.75) .. controls (11,15) and (11.25,14) .. (18.25,14.25);
+\draw [->, >=Stealth] (5.5,7.75) -- (18.75,7.75);
+\draw [->, >=Stealth] (5.5,7.75) -- (5.5,16.5);
+\node [font=\Large, rotate around={90:(0,0)}] at (4.25,12.25) {Spontantous Magnetization};
+\node [font=\Large] at (18.5,7) {1/T};
+\node [font=\Large] at (7.75,7) {1/$T_c$};
+\draw [dashed] (7.75,7.75) -- (7.75,16.25);
+\end{tikzpicture}}}
+
+
+\item 
+  {\scalebox{0.7}{ \begin{tikzpicture}
+    \draw[fill=white!70] (-3,-3) .. controls (2.5,-3) and (-0.5,3) .. (3,3)
+             .. controls (-2.5,3) and (0.5,-3) ..(-3,-3);
+    \draw[-latex] (-4,0) -- (4,0)node[below]{Magnetic field};
+    \draw[-latex] (0,-4) -- (0,4)node[left]{Magnetization};
+            
+    \draw[dashed] (-4,3) -- (4,3);
+    \draw[dashed] (-4,-3) -- (4,-3);
+
+\end{tikzpicture}}
+}
+
+
+\item {\scalebox{0.4}{ 
+\begin{tikzpicture}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [short] (8,6.5) .. controls (16,7.75) and (17.75,12.75) .. (20,17);
+\draw [->, >=Stealth] (8,6.5) -- (8,17);
+\draw [->, >=Stealth] (8,6.5) -- (21.5,6.5);
+\node [font=\LARGE] at (21.25,5.75) {T};
+\node [font=\LARGE, rotate around={90:(0,0)}] at (6.75,11.25) {Specific Heat};
+\node [font=\LARGE] at (13.75,6) {$T_c$};
+\draw [dashed] (13.5,6.5) -- (13.5,16.75);
+\end{tikzpicture}
+}
+} 
+
+
+
+\item {
+\scalebox{0.5}{
+\begin{tikzpicture}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [short] (11,14.25) .. controls (11.25,13.25) and (11.5,9.75) .. (21,8.5);
+\draw [->, >=Stealth] (6.75,8) -- (22.5,8);
+\draw [dashed] (10.75,14.25) -- (10.75,8);
+\draw [short] (10.5,14.25) .. controls (10.5,13.25) and (10,9.5) .. (5.75,8.5);
+\draw [->, >=Stealth] (5.75,8) -- (5.75,16);
+\draw [->, >=Stealth] (5.75,8) -- (22.5,8);
+\node [font=\LARGE] at (10.75,7.5) {$T_c$};
+\node [font=\LARGE] at (22.25,7.5) {T};
+\node [font=\LARGE, rotate around={90:(0,0)}] at (5,12.25) {Magnetic Susceptibility};
+\end{tikzpicture}
+}
+}
+
+\end{enumerate}
+\end{multicols}
+\item The thermal conductivity of a given material reduces when it undergoes a transition from its normal state to the superconducting state. The reason is: 
+
+\hfill{(PH 2010)}
+
+\begin{enumerate}
+\item The Cooper pairs cannot transfer energy to the lattice 
+\item Upon the formation of Cooper pairs, the lattice becomes less efficient in heat transfer
+\item The electrons in the normal state lose their ability to transfer heat because of their coupling to the Cooper pairs 
+\item  The heat capacity increases on transition to the superconducting state leading to a reduction in thermal conductivity
+\end{enumerate}
+
+
+
+\item The basic process underlying the neutron $\beta$- decay is 
+
+
+\hfill{(PH 2010)}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $d \rightarrow u + e^- + \overline{\nu}_e$
+\item $d \rightarrow u + e^-$ 
+\item $s \rightarrow u + e^- + \overline{\nu}_e$ 
+\item $u \rightarrow d + e^- + \overline{\nu}_e$
+\end{enumerate}
+\end{multicols}
+
+\item In the nuclear shell model, the spin parity of $^{15}N$ is given by 
+
+\hfill{(PH 2010)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{1}{2}^{-}$ 
+\item $\frac{1}{2}^{+}$ 
+\item $\frac{3}{2}^{-}$ 
+\item $\frac{3}{2}^{+}$ 
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Match the reactions on the left with the associated interactions on the right. \\
+(1) $\pi^+ \rightarrow \mu^+ + \nu_{\mu}$  \quad \qquad \qquad \qquad (i) Strong \\
+(2) $\pi^0 \rightarrow \gamma + \gamma$ \qquad \qquad \qquad \qquad (ii) Electromagnetic\\ 
+(3) $\pi^0 + n \rightarrow \pi^- + p$ \qquad \qquad \qquad (iii) Weak 
+
+
+\hfill{(PH 2010)}
+\begin{multicols}{2}
+\begin{enumerate}
+\item (1, iii), (2, ii), (3, i) 
+\item (1, i), (2, ii), (3, iii) 
+\item (1, ii), (2, i), (3, iii) 
+\item (1, iii), (2, i), (3, ii)
+\end{enumerate}
+\end{multicols}
+
+
+
+\end{enumerate}
+\end{document}

@@ -34,6 +34,8 @@
 \usepackage{float}
 \usepackage{circuitikz}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.pathmorphing}
 \newtheorem{theorem}{Theorem}[section]
@@ -176,6 +178,7 @@
 \draw [->, >=Stealth] (23.75,4.75) -- (28.75,4.75);
 \draw [->, >=Stealth] (23.75,6) -- (27.75,6);
 \draw [->, >=Stealth] (23.75,11) -- (27.75,11);
+\node [font=\LARGE] at (19.5,8.5) {d};
 \draw [->, >=Stealth] (23.75,9.75) -- (26.75,9.75);
 \draw [->, >=Stealth] (23.75,7.25) -- (26.75,7.25);
 \draw [->, >=Stealth] (23.75,8.5) -- (25.75,8.5);
@@ -191,7 +194,7 @@
 }
 
 \item 
-{\scalebox{0.4}{\begin{tikzpicture}
+{\scalebox{0.4}{\begin{circuitikz}
 \tikzstyle{every node}=[font=\LARGE]
 \draw [->, >=Stealth] (11.25,12.25) -- (16.25,12.25);
 \draw [->, >=Stealth] (11.25,11) -- (16.25,11);
@@ -206,17 +209,17 @@
 \draw [<->, >=Stealth] (20,10.25) -- (20,6.75);
 \node [font=\LARGE] at (19.5,8.5) {d};
 \begin{scope}[rotate around={-90:(26.25,12.25)}]
-\draw[domain=26.25:33.75,samples=100,smooth] plot (\x,{1.5*sin(0.9*\x r -21.25 r ) +12.25});
+\draw[domain=26.25:33.75,samples=100,smooth] plot (\x,{1.5*sin(0.9*\x r -22.0 r ) +12.25});
 \end{scope}
 \draw [short] (26.25,12.25) -- (26.25,4.75);
-\draw [->, >=Stealth] (26.25,12.25) -- (27.5,12.25);
-\draw [->, >=Stealth] (26.25,11.5) -- (27.5,11.5);
-\draw [->, >=Stealth] (26.25,9.25) -- (25.25,9.25);
+\draw [->, >=Stealth] (26.25,12.25) -- (27.75,12.25);
+\draw [->, >=Stealth] (26.25,11.5) -- (27.25,11.5);
+\draw [->, >=Stealth] (26.25,9.5) -- (25.0,9.5);
 \draw [->, >=Stealth] (26.25,8.5) -- (24.75,8.5);
 \draw [->, >=Stealth] (26.25,7.75) -- (25.25,7.75);
-\draw [->, >=Stealth] (26.25,5.75) -- (27.25,5.75);
+\draw [->, >=Stealth] (26.25,5.75) -- (27.75,5.75);
 \draw [->, >=Stealth] (26.25,4.75) -- (27.5,4.75);
-\end{tikzpicture} 
+\end{circuitikz} 
 }
 }
 
@@ -237,16 +240,15 @@
 \draw [<->, >=Stealth] (20,10.25) -- (20,6.75);
 \node [font=\LARGE] at (19.5,8.5) {d};
 \begin{scope}[rotate around={-90:(25,12.25)}]
-\draw[domain=25:32.5,samples=100,smooth] plot (\x,{1.5*sin(0.89*\x r -23.1 r ) +12.25});
+\draw[domain=25:32.5,samples=100,smooth] plot (\x,{1.5*sin(0.89*\x r -23.75 r ) +12.25});
 \end{scope}
 \draw [short] (25,12.25) -- (25,4.75);
 \draw [->, >=Stealth] (25,12.25) -- (23.5,12.25);
 \draw [->, >=Stealth] (25,11.5) -- (23.75,11.5);
-\draw [->, >=Stealth] (25,9.5) -- (25.75,9.5);
-\draw [->, >=Stealth] (25,8.75) -- (26.25,8.75);
+\draw [->, >=Stealth] (25,9.5) -- (26.25,9.5);
+\draw [->, >=Stealth] (25,8.75) -- (26.5,8.75);
 \draw [->, >=Stealth] (25,8) -- (26.25,8);
-\draw [->, >=Stealth] (25,7.25) -- (25.75,7.25);
-\draw [->, >=Stealth] (25,5.75) -- (24,5.75);
+\draw [->, >=Stealth] (25,5.75) -- (23.75,5.75);
 \draw [->, >=Stealth] (25,5) -- (23.5,5);
 \end{tikzpicture}
 }
@@ -286,7 +288,7 @@
 
 \item A container of square cross-section is partially filled with a liquid of density $\rho_1$. The cylinder is intended to float in another liquid of density $\rho_2$, as shown in the figure. The distance between metacentre and centre of buoyancy is $\frac{1}{V_{sub}}$, where $I$ and $V_{sub}$ are area moment of inertia of the cross-section and submerged volume, respectively. Neglect the weight of the container.
 
-
+\begin{center}
 {\scalebox{0.4}{\begin{tikzpicture}
 \tikzstyle{every node}=[font=\LARGE]
 \draw [line width=2pt, short] (5,19.75) -- (5,8.5);
@@ -320,7 +322,7 @@
 \end{tikzpicture}
 }
 }
-
+\end{center}
 Which one of the following is the correct condition for stability?
 
 \hfill{(XE 2014)}
@@ -373,7 +375,7 @@ $\vec{V}=3t^{2}\hat{i}+(x-1)\hat{j}$. The equation for the path line of a partic
 the free surface from the canal bed at upstream of the hump is $H$.The free surface height reduces
 to $H_1$ above the hump.
 
-
+\begin{center}
 {\scalebox{0.4}{
 \begin{circuitikz}
 \tikzstyle{every node}=[font=\LARGE]
@@ -408,7 +410,7 @@ to $H_1$ above the hump.
 \end{circuitikz}
 }
 }
-
+\end{center}
 
 
 Assuming the canal bed to be horizontal, the discharge per unit width is given by
@@ -428,6 +430,7 @@ Assuming the canal bed to be horizontal, the discharge per unit width is given b
 \item Steady state incompressible flow through a pipe network is shown in the figure. Inlets marked as $\brak{1}$,$ \brak{2}$, and $\brak{3}$ and exit marked as $\brak{4}$ are shown with their respective diameters. The exit flow rate at $\brak{4}$ is $0.1m^{3}/s$. A $ 20 \% $ increase in flow rate through $\brak{1}$ results in a $10\%$ increase in flow rate through \brak{4}. The original velocity through inlet \brak{3} is \rule{2cm}{0.4pt}$m/s$. 
 \hfill{(XE 2014)}
 
+\begin{center}
 {\scalebox{0.4}{
 \begin{circuitikz}
 \tikzstyle{every node}=[font=\LARGE]
@@ -458,6 +461,7 @@ Assuming the canal bed to be horizontal, the discharge per unit width is given b
 \end{circuitikz}
 }
 }
+\end{center}
 
 \item A reducing elbow is used to deflect water upward by $30^{\circ}$ as shown in the figure. The mass flow rate at the inlet is $14 kg/s$. Water is entering at a gauge pressure of $200 kPa$ and exits to the atmosphere. The cross-sectional area is $113 cm^{2}$ at the inlet and $7 cm^{2}$ at the exit. Density of water and acceleration due to gravity are $1000 kg/m^{3}$ and $10 m/s^{2}$, respectively. Magnitude of $x$ - component of the water force on the elbow is \_\_\_\_ $N$. 
 \hfill{(XE 2014)}

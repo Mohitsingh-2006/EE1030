@@ -1,0 +1,220 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+% Marks the beginning of the document
+\begin{document}
+\title{gate 6}
+\author{EE24Btech11041 - Mohit}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\begin{enumerate}
+\item Let \\
+\begin{align}
+f(x)=\frac{x^2}{x^2+(1-nx)^2}, x \in [0,1], n = 1,2,3,\dots  .
+\end{align}
+Then, which of the following statements is TRUE?
+\hfill{(MA 2022)}
+\begin{enumerate}
+\item $\{f_n\}$ is not equicontinous in $[0,1]$
+\item $\{f_n\}$ is uniformly convergent on $[0,1]$
+\item $\{f_n\}$ is equicontinous on $[0,1]$
+\item $\{f_n\}$ is uniformly bounded and has a subsquence coverging uniformly in $[0,1]$
+\end{enumerate}
+\item Let $(\mathbb{Q},d)$ be the metric space with $d\brak{x,y} = \abs{x-y}$. Let $E = \{p \in \mathbb{Q} : 2 < p^2 < 3 \}$ . Then, the set $E$ is 
+\hfill{(MA 2022)}
+\begin{enumerate}
+\item closed but not compact
+\item not closed but not compact
+\item compact
+\item neither closed nor compact
+\end{enumerate}
+
+\item Let $T:L^{2}[-1,1]\rightarrow L^{2}[-1,1]$ be defined by  $Tf = \tilde{f}$, where  $\tilde{f}(x) = f(-x)$ almost everywhere.
+If $M$ is the kernel of $I-T$, then the distance between the function  $\phi(t) = e^t$  and $M$ is 
+\hfill{(MA 2022)}
+\begin{multicols}{2}
+\begin{enumerate}
+\item \quad $\frac{1}{2}\sqrt{(e^{2}-e^{-2}+4)}$
+\item \quad $\frac{1}{2}\sqrt{(e^{2}-e^{-2}-2)}$ 
+\item \quad $\frac{1}{2}\sqrt{(e^{2}-4)} $
+\item \quad $\frac{1}{2}\sqrt{(e^{2}-e^{-2}-4)}$
+\end{enumerate}
+\end{multicols}
+\item $X, Y $ and $Z$ be Banach spaces. Suppose that $T:X\rightarrow Y$ is linear and $S:Y \rightarrow Z$ is linear, bounded and injective. In addition, if $ S \circ T : X \rightarrow Z$ is bounded, then, which of the following statements is TRUE?
+\hfill{(MA 2022)}
+\begin{enumerate}
+\item T is surjective
+\item T is bounded but not continuous
+\item T is bounded 
+\item T is not bounded 
+\end{enumerate}
+\item The first derivative of a function $f \in C^{\infty}(-3, 3)$ is approximated by an interpolating polynomial of degree 2, using the data
+\begin{align}
+(-1, f(-1)),(0, f(0)) \text{ and } (2, f(2)).
+\end{align}
+It is found that
+\begin{align}
+f'(0) \approx \frac{2}{3}f(-1) + \alpha f(0) + \beta f(2).
+\end{align}
+Then, the value of $\frac{1}{\alpha \beta}$ is
+\hfill{(MA 2022)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 3 
+\item 6
+\item 9
+\item 12
+\end{enumerate}
+\end{multicols}
+\item The work done by the force $F = \brak{x+y}\hat{i} - \brak{x^2+y^2}\hat{j}$, where $\hat{i}$ and $\hat{j}$ are unit
+vectors in $\vec{OX}$ and $\vec{OY}$ directions, respectively, along the upper half of the circle $x^2+y^2=1$ from $\brak{1,0}$ to $\brak{-1,0}$ in the $xy-$plane is
+\hfill{(MA 2022)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-\pi $
+\item $-\frac{\pi}{2}$
+\item $\frac{\pi}{2}$
+\item $\pi$
+\end{enumerate} 
+\end{multicols}
+\item Let $u(x, t)$ be the solution of the wave equation
+\hfill{(MA 2022)}
+\begin{align}
+\frac{\partial^2u}{\partial^2} - \frac{\partial^2u}{\partial x^2} = 0,0<x<\pi,t>0, 
+\end{align}
+with the initial conditions
+\begin{align}
+u\brak{x,0} = \sin{x}+\sin{2x}+\sin{3x},\frac{\partial u}{\partial t}\brak{x,0} = 0, 0<x<\pi
+\end{align}
+and the boundary comditions $u\brak{0, t} = u\brak{n, t} = 0, t \geq 0$.Then, the value of $u\brak{\frac{\pi}{2},\pi}$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-\frac{1}{2}$
+\item 0
+\item $\frac{1}{2}$
+\item 1
+\end{enumerate}
+\end{multicols}
+\item Let $T : \mathbb{R}^2 \rightarrow \mathbb{R}^2$ be a linear transformation defined by
+\begin{align}
+T\brak{\brak{1,2}}=\brak{1,0} \text{ and } T\brak{\brak{2,1}}=\brak{1,1}
+\end{align}
+For $p,q \in \mathbb{R}^2,\text{let } T^{-1}\brak{\brak{p,q}}=\brak{x,y}$.\\
+Which of the following statements is TRUE?
+\hfill{(MA 2022)}
+
+\begin{enumerate}
+\item $x=p-q; y=2p-q$
+\item $x=p+q; y=2p-q$
+\item $x=p+q; y=2p+q$
+\item $x=p-q; y=2p+q$
+\end{enumerate}
+\item Let $y = (\alpha,-1)^T , \alpha \in \mathbb{R}$ be a feasible solution for the dual problem of the linear
+programming problem
+\begin{align}
+\text{Maximize : } 5x_1 + 12x_2 \\
+\text{subject to : } x_1+2x_2+x_3 \leq 10 \\
+2x_1-x_2+3x_3 = 8 \\
+x_1,x_2,x_3 \geq 0.
+\end{align}
+Which of the following statements is TRUE?
+\hfill{(MA 2022)}
+\begin{multicols}{4}
+\begin{enumerate}
+
+\item $\alpha < 3$
+\item $3 \leq \alpha < 5.5$
+\item $5.5 \leq \alpha < 7$
+\item $\alpha \geq 7$
+\end{enumerate}
+\end{multicols}
+\item Let $K$ denote the subset of $\mathbb{C}$ consisting of elements algebraic over $\mathbb{Q}$. Then, which
+of the following statements are TRUE?
+\hfill{(MA 2022)}
+\begin{enumerate}
+\item No element of $\mathbb{C}\backslash K$ is algebraic over $\mathbb{Q}$
+\item $K$ is an algebraically closed field
+\item For any bijective ring homomorphism $f : \mathbb{C} \rightarrow \mathbb{C} $, we have $f(K)=K$
+\item There is no bijection between $K$ and $\mathbb{Q}$
+\end{enumerate}
+\item Let $T$ be a Mobius transformation such that $T\brak{0}=\alpha,T\brak{\alpha}=0$ and $T(\infty)=-\alpha $, where $\alpha = \frac{-1+i}{\sqrt{2}}$ Let $L$ denote the straight line passing through the origin with slope  $-1$, and let $C$ denote the circle of unit radius centred at the origin. Then, which of the following statements are TRUE?
+\hfill{(MA 2022)}
+\begin{enumerate}
+\item $T$ maps $L$ to a straight line
+\item $T$ maps $L$ to a circle
+\item $T^{-1}$ maps $C$ to a straight line
+\item $T^{-1}$ maps $C$ to a circle
+\end{enumerate}
+\item Let $a>0$. Define $D_a : L^2\brak{\mathbb{R}} \rightarrow L^2\brak{\mathbb{R}}$ by $\brak{D_af}\brak{x}=\frac{1}{\sqrt{a}}f\brak{\frac{x}{a}}$,a;most everywhere, for $f \in L^2\brak{\mathbb{R}}$. Then, which of the following statements are TRUE?
+\hfill{(MA 2022)}
+\begin{enumerate}
+\item $D_a$ is a linear isometry
+\item $D_a$ is a bijection
+\item $D_a \circ D_b=D_{a+b},b>0$
+\item $D_a$ is bounded from below
+\end{enumerate}
+\item Let $\{ \phi_0,\phi_1,\phi_2,\dots\}$ be an orthonormal set in $L^2[-1, 1]$ such that $\phi_n = C_nP_n$, where
+$C_n$ is a constant and $P_n$ is the Legendre polynomial of degree $n$, for each $n \in \mathbb{N} \cup \{0\}$. Then, which of the following statements are TRUE?
+\hfill{(MA 2022)}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\phi_6\brak{1}=1$
+\item $\phi_7\brak{-1}=1$
+\item $\phi_7\brak{1}=\sqrt{\frac{15}{2}}$
+\item $\phi_7\brak{-1}=\sqrt{\frac{13}{2}}$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{document}

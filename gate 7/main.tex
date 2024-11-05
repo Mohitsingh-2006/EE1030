@@ -217,7 +217,7 @@ which options amongst the following are true?
   \centering
 \begin{tabularx}{\textwidth}{|c|X|}
     \hline
-\begin{circuitikz}
+{\scalebox{0.6}{\begin{circuitikz}
 \tikzstyle{every node}=[font=\LARGE]
 \draw [ fill={rgb,255:red,154; green,153; blue,150} , line width=0.5pt ] (6.25,13.5) rectangle (11.25,13.25);
 \node at (7.5,13.35) [ocirc] {};
@@ -274,9 +274,10 @@ which options amongst the following are true?
 \node [font=\normalsize] at (8.75,13.75) {C};
 \node [font=\normalsize] at (10,13.75) {D};
 \node [font=\normalsize] at (11,13.75) {E};
-\end{circuitikz} & Structure I: Beam with hinge support at A, roller at C, guided roller at E, and internal hinges at B and D  \\
+\end{circuitikz} }} & Structure I: Beam with hinge support at A, roller at C, guided roller at E, and internal hinges at B and D  \\
     \hline
-    \begin{circuitikz}
+    \centering
+{\scalebox{0.6}{\begin{circuitikz}
 \tikzstyle{every node}=[font=\normalsize]
 \draw [short] (7.5,13.5) -- (11.25,13.5);
 \draw [short] (11.25,13.5) -- (11.25,9.75);
@@ -330,9 +331,9 @@ which options amongst the following are true?
 \node [font=\normalsize] at (11,13.75) {D};
 \node [font=\normalsize] at (7.25,10) {B};
 \node [font=\normalsize] at (11.5,9.75) {C};
-\end{circuitikz} & Structure II: Pin-jointed truss, with hinge support at A, and rollers at B and D \\
+\end{circuitikz} } } & Structure II: Pin-jointed truss, with hinge support at A, and rollers at B and D \\
     \hline 
-    \begin{circuitikz}
+{\scalebox{0.6}{\begin{circuitikz}
 \tikzstyle{every node}=[font=\normalsize]
 \draw [short] (6.25,13.5) -- (13.75,13.5);
 \draw [short] (13.75,13.5) -- (13.75,9.75);
@@ -383,7 +384,7 @@ which options amongst the following are true?
 \draw [short] (6.25,9.5) -- (6,9.25);
 \draw [short] (6.5,9.5) -- (6.25,9.25);
 \draw [short] (6.75,9.5) -- (6.5,9.25);
-\end{circuitikz} & Structure III: Pin- jointed truss, with hinge support at A and roller at C\\
+\end{circuitikz} }}& Structure III: Pin- jointed truss, with hinge support at A and roller at C\\
     \hline  
     \end{tabularx}
 \end{table}

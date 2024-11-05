@@ -1,0 +1,398 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+% Marks the beginning of the document
+\begin{document}
+\title{gate 7}
+\author{EE24Btech11041 - Mohit}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\begin{enumerate}
+\item A singly reinforced concrete beam of balanced section is made of M20 grade concrete and Fe415 grade steel bars. The magnitudes of the maximum compressive strain in concrete and the tensile strain in the bars at ultimate state under flexure, as per IS $456: 2000$ are \rule{2cm}{0.4pt}, respectively. (round off to four decimal places)
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item 0.0035 and 0.0038
+\item 0.0020 and 0.0018
+\item 0.0035 and 0.0041
+\item 0.0020 and 0.0031
+\end{enumerate}
+\item In cement concrete mix design, with the increase in water-cement ratio, which one of the following statements is TRUE?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item Compressive strength decreases but workability increases
+\item Compressive strength increases but workability decreases
+\item Both compressive strength and workability decrease
+\item Both compressive strength and workability increase
+\end{enumerate}
+\item The specific gravity of a soil is $2.60$. The soil is at $50 \%$ degree of saturation with a
+water content of $15 \%$. The void ratio of the soil is \rule{2cm}{0.4pt}.
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item 0.35
+\item 0.78
+\item 0.87
+\item 1.28
+\end{enumerate}
+\item A group of $9$ friction piles are arranged in a square grid maintaining equal spacing in all directions. Each pile is of diameter $300 mm$ and length $7 m$. Assume that the soil is cohesionless with effective friction angle $\phi^{'} = 32^{\circ}$. What is the center-to-
+center spacing of the piles (in $m$) for the pile group efficiency of $60\%$?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item 0.582
+\item 0.486
+\item 0.391
+\item 0.677
+\end{enumerate}
+\item A possible slope failure is shown in the figure. Three soil samples are taken from different locations (1, II and III) of the potential failure plane. Which is the most appropriate shear strength test for each of the sample to identify the failure mechanism? Identify the correct combination from the following options:
+
+\text{  } \qquad P: Triaxial compression test\\
+\text{  } \qquad Q: Triaxial extension test\\
+\text{  } \qquad R: Direct shear or shear box test\\
+\text{  } \qquad S: Vane shear test
+\begin{center}
+{\scalebox{0.6}{\begin{circuitikz}
+\tikzstyle{every node}=[font=\Large]
+\draw [dashed] (8.75,7.25) .. controls (14.75,5.25) and (15.75,7) .. (15.75,12.25);
+\draw [short] (7,7.25) -- (10.25,7.25);
+\draw [short] (10.25,7.25) -- (13.75,12.25);
+\draw [short] (13.75,12.25) -- (20,12.25);
+\draw  (9.25,6.25) rectangle (10,7);
+\draw  (12.5,6.75) rectangle (13.25,6);
+\draw  (15.25,11.25) rectangle (16.25,10.5);
+\node [font=\Large] at (9.5,5.75) {I};
+\node [font=\Large] at (13,5.5) {II};
+\node [font=\Large] at (16.75,11) {III};
+\node [font=\Large] at (9.25,11.25) {slope face};
+\node [font=\Large] at (18.75,7.75) {Potential failure plane};
+\draw [->, >=Stealth] (10.75,11) -- (12,10.5);
+\draw [->, >=Stealth] (16,8.25) -- (15.75,9);
+\end{circuitikz}
+}
+}
+\end{center}
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item I-Q, II-R, III-P
+\item I-R, II-P, III-Q
+\item I-S, II-Q, III-R
+\item I-P, II-R, III-Q
+\end{enumerate}
+\item When a supercritical stream enters a mild-sloped (M) channel section, the type of
+flow profile would become \rule{2cm}{0.4pt}.
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item $M_1$
+\item $M_2$
+\item $M_3$
+\item $M_1$ and $M_2$
+\end{enumerate}
+\item Which one of the following statements is TRUE for Greenhouse Gas (GHG) in the
+atmosphere?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item GHG absorbs the incoming short wavelength solar radiation to the earth surface,
+and allows the long wavelength radiation coming from the earth surface to pass
+through
+\item GHG allows the incoming long wavelength solar radiation to pass through to the
+earth surface, and absorbs the short wavelength radiation coming from the earth
+surface
+\item GHG allows the incoming long wavelength solar radiation to pass through to the
+earth surface, and allows the short wavelength radiation coming from the earth
+surface to pass through
+\item GHG allows the incoming short wavelength solar radiation to pass through to the
+earth surface, and absorbs the long wavelength radiation coming from the earth
+surface
+\end{enumerate}
+\item $G_1$ and $G_2$ are the slopes of the approach and departure grades of a vertical curve,
+respectively.\\ \\
+Given $\abs{G_1} < \abs{G_2}$ and $\abs{G_1} \neq \abs{G_2} \neq 0$\\
+Statement 1: $+G_1$ followed by $+G_2$ results in a sag vertical curve.\\
+Statement 2: $-G_1$ followed by $-G_2$ results in a sag vertical curve.\\
+Statement 1: $+G_1$ followed by $-G_2$ results in a crest vertical curve.\\ \\
+Which option amongst the following is true?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item Statement 1 and Statement 3 are correct; Statement 2 is wrong
+\item Statement 1 and Statement 2 are correct; Statement 3 is wrong
+\item Statement 1 is correct; Statement 2 and Statement 3 are wrong
+\item Statement 2 is correct; Statement 1 and Statement 3 are wrong
+\end{enumerate}
+\item The direct and reversed zenith angles observed by a theodolite are $56^{\circ} 00^{'} 00^{''}$ and
+$303^{\circ} 00^{'} 00^{''}$, respectively. What is the vertical collimation correction?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item $+1^{\circ} 00^{'} 00^{''}$
+\item $-1^{\circ} 00^{'} 00^{''}$
+\item $-0^{\circ} 30^{'} 00^{''}$
+\item $+0^{\circ} 30^{'} 00^{''}$
+\end{enumerate}
+\item  A student is scanning his 10 inch $\times$ 10 inch certificate at 600 dots per inch (dpi) to
+convert it to raster. What is the percentage reduction in number of pixels if the same
+certificate is scanned at 300 dpi?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item 62
+\item 88
+\item 75
+\item 50
+\end{enumerate}
+\item If $\vec{M}$ is an arbitrary real $n\times n$ matrix, then which of the following matrices will
+have non-negative eigenvalues?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item $\vec{M}^2$
+\item $\vec{M}\vec{M}^T$
+\item $\vec{M}^T\vec{M}$
+\item $\brak{\vec{M}^T}^2$
+\end{enumerate}
+\item The following function is defined over the interval $[-L, L]$:
+\begin{align}
+f(x) = px^4 + qx^5.
+\end{align}
+If it is expressed as a Fourier series,
+\begin{align}
+f(x) = a_0 + \sum_{n=1}^{\infty} \left\{ a_n \sin\left(\frac{n\pi x}{L}\right) + b_n \cos\left(\frac{n\pi x}{L}\right) \right\},
+\end{align}
+which options amongst the following are true?
+\hfill{(CE 2023)}
+\begin{enumerate}
+\item $a_n, n = 1, 2, \dots, \infty$ depend on $p$
+\item $a_n, n = 1, 2, \dots, \infty$ depend on $q$
+\item $b_n, n = 1, 2, \dots, \infty$ depend on $p$
+\item $b_n, n = 1, 2, \dots, \infty$ depend on $q$
+\end{enumerate}
+\item Consider the following three structures:\\
+\begin{table}[h!]    
+  \centering
+\begin{tabularx}{\textwidth}{|c|X|}
+    \hline
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [ fill={rgb,255:red,154; green,153; blue,150} , line width=0.5pt ] (6.25,13.5) rectangle (11.25,13.25);
+\node at (7.5,13.35) [ocirc] {};
+\node at (10,13.35) [ocirc] {};
+\node at (8.75,13.169) [circ] {};
+\node at (11.35,13.5) [circ] {};
+\node at (11.35,13.25) [circ] {};
+\draw [line width=2pt, short] (11.25,14.25) -- (11.25,12.75);
+\draw [line width=2pt, short] (11.25,13) -- (11.25,12.75);
+\draw [line width=2pt, short] (11.25,13) -- (11.25,12.5);
+\draw [line width=0.6pt, short] (11.45,14.25) -- (11.45,12.5);
+\draw [line width=0.6pt, short] (8.5,13.1) -- (9,13.1);
+\draw [line width=0.6pt, short] (6,13) -- (6.5,13);
+\draw [line width=0.6pt, short] (6.25,13.25) -- (6.25,13);
+\draw [line width=0.6pt, short] (6,13) -- (6.25,13.25);
+\draw [line width=0.6pt, short] (6.25,13.25) -- (6.5,13);
+\draw [line width=0.6pt, short] (5.75,13) -- (6.75,13);
+\draw [line width=0.6pt, short] (8.75,13.1) -- (8.5,12.85);
+
+\draw [line width=0.6pt, short] (9,13.1) -- (8.75,12.85);
+\draw [line width=0.6pt, short] (8.5,13.1) -- (8.25,12.85);
+\draw [line width=0.6pt, short] (8.25,13.1) -- (8.75,13.1);
+\draw [line width=0.6pt, short] (6,13) -- (5.75,12.75);
+\draw [line width=0.6pt, short] (6.25,13) -- (6,12.75);
+\draw [line width=0.6pt, short] (6.5,13) -- (6.25,12.75);
+\draw [line width=0.6pt, short] (6.75,13) -- (6.5,12.75);
+\draw [line width=0.6pt, short] (11.75,14.25) -- (11.5,14);
+\draw [line width=0.6pt, short] (11.75,14.25) -- (11.5,14);
+\draw [line width=0.6pt, short] (11.75,14.25) -- (11.5,14);
+\draw [line width=0.6pt, short] (11.75,14) -- (11.5,13.75);
+\draw [line width=0.6pt, short] (11.75,13.75) -- (11.5,13.5);
+\draw [line width=0.6pt, short] (11.75,13.5) -- (11.5,13.25);
+\draw [line width=0.6pt, short] (11.75,13.25) -- (11.5,13);
+\draw [line width=0.6pt, short] (11.75,13) -- (11.5,12.75);
+\draw [line width=0.6pt, short] (11.75,12.75) -- (11.5,12.5);
+\draw [line width=0.6pt, short] (6.25,12.5) -- (6.25,11.75);
+\draw [line width=0.6pt, short] (7.5,12.5) -- (7.5,11.75);
+\draw [line width=0.6pt, short] (8.75,12.5) -- (8.75,11.75);
+\draw [line width=0.6pt, short] (10,12.5) -- (10,11.75);
+\draw [line width=0.6pt, short] (11.25,12.5) -- (11.25,11.75);
+\draw [line width=0.6pt, <->, >=Stealth] (6.25,12.25) -- (7.5,12.25);
+\draw [line width=0.6pt, <->, >=Stealth] (7.5,12.25) -- (8.75,12.25);
+\draw [line width=0.6pt, <->, >=Stealth] (8.75,12.25) -- (10,12.25);
+\draw [line width=0.6pt, <->, >=Stealth] (10,12.25) -- (11.25,12.25);
+\node [font=\large] at (6.75,11.75) {L};
+\node [font=\large] at (8,11.75) {L};
+\node [font=\large] at (9.5,11.75) {L};
+\node [font=\large] at (10.5,11.75) {L};
+\draw [->, >=Stealth] (8.5,15.25) -- (7.5,13.75);
+\draw [->, >=Stealth] (9,15.25) -- (9.75,13.75);
+\draw [->, >=Stealth] (8.5,15.5) -- (10.5,15.5)node[pos=0.5, fill=white]{Internal hinge};
+\node [font=\normalsize] at (6.25,13.75) {A};
+\node [font=\normalsize] at (7.25,13.75) {B};
+\node [font=\normalsize] at (8.75,13.75) {C};
+\node [font=\normalsize] at (10,13.75) {D};
+\node [font=\normalsize] at (11,13.75) {E};
+\end{circuitikz} & Structure I: Beam with hinge support at A, roller at C, guided roller at E, and internal hinges at B and D  \\
+    \hline
+    \begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (7.5,13.5) -- (11.25,13.5);
+\draw [short] (11.25,13.5) -- (11.25,9.75);
+\draw [short] (11.25,9.75) -- (7.5,9.75);
+\draw [short] (7.5,9.75) -- (7.5,13.5);
+\draw [short] (7.5,9.75) -- (11.25,13.5);
+\draw [short] (7.5,13.5) -- (11.25,9.75);
+\node at (7.5,9.75) [circ] {};
+\node at (11.25,9.75) [circ] {};
+\node at (11.25,13.5) [circ] {};
+\node at (7.5,13.5) [circ] {};
+\draw [short] (11.25,13.5) -- (11.5,13.75);
+\draw [short] (11.25,13.5) -- (11.5,13.25);
+\draw [short] (11.5,13.75) -- (11.5,13.25);
+\draw [short] (7.5,9.75) -- (7.25,9.5);
+\draw [short] (7.5,9.75) -- (7.75,9.5);
+\draw [short] (7.25,9.5) -- (7.75,9.5);
+\draw [short] (7.5,13.5) -- (7.25,13.75);
+\draw [short] (7.5,13.5) -- (7.25,13.25);
+\draw [short] (7.25,13.75) -- (7.25,13.25);
+\node at (11.58,13.75) [circ] {};
+\node at (11.58,13.25) [circ] {};
+\draw [line width=0.5pt, short] (11.7,14) -- (11.7,13);
+\draw [line width=0.5pt, short] (7,9.25) -- (8,9.25);
+\node at (7.25,9.4) [circ] {};
+\node at (7.75,9.4) [circ] {};
+\draw [short] (19.5,8.75) -- (19.5,8.75);
+\draw [short] (7.25,9.25) -- (7,9.25);
+\draw [short] (7.25,9.25) -- (7,9);
+\draw [short] (7.5,9.25) -- (7.25,9);
+\draw [short] (7.75,9.25) -- (7.5,9);
+\draw [short] (8,9.25) -- (7.75,9);
+\draw [short] (11.75,13.75) -- (12,14);
+\draw [short] (11.75,13.5) -- (12,13.75);
+\draw [short] (11.75,13.25) -- (12,13.5);
+\draw [short] (11.75,13) -- (12,13.25);
+\draw [short] (7.25,14) -- (7.25,13);
+\draw [short] (7.25,14) -- (7,13.75);
+\draw [short] (7.25,13.75) -- (7,13.5);
+\draw [short] (7.25,13.5) -- (7,13.25);
+\draw [short] (7.25,13.25) -- (7,13);
+\draw [short] (12.5,13.5) -- (13,13.5);
+\draw [short] (12.5,9.75) -- (13,9.75);
+\draw [short] (7.5,8.75) -- (7.5,8.25);
+\draw [short] (11.25,8.75) -- (11.25,8.25);
+\draw [<->, >=Stealth] (7.5,8.5) -- (11.25,8.5);
+\draw [<->, >=Stealth] (12.75,13.5) -- (12.75,9.75);
+\node [font=\Large] at (13.25,11.75) {L};
+\node [font=\Large] at (9.25,8) {L};
+\node [font=\normalsize] at (7.75,13.75) {A};
+\node [font=\normalsize] at (11,13.75) {D};
+\node [font=\normalsize] at (7.25,10) {B};
+\node [font=\normalsize] at (11.5,9.75) {C};
+\end{circuitikz} & Structure II: Pin-jointed truss, with hinge support at A, and rollers at B and D \\
+    \hline 
+    \begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (6.25,13.5) -- (13.75,13.5);
+\draw [short] (13.75,13.5) -- (13.75,9.75);
+\draw [short] (6.25,13.5) -- (6.25,9.75);
+\draw [short] (6.25,9.75) -- (13.75,9.75);
+\draw [short] (10,13.5) -- (10,9.75);
+\draw [short] (10,9.75) -- (13.75,13.5);
+\draw [short] (10,13.5) -- (13.75,9.75);
+\node at (6.25,13.5) [circ] {};
+\node at (6.25,9.75) [circ] {};
+\node at (10,13.5) [circ] {};
+\node at (10,9.75) [circ] {};
+\node at (13.75,9.75) [circ] {};
+\node at (13.75,13.5) [circ] {};
+\draw [short] (6.25,9.75) -- (6.25,9.5);
+\draw [short] (6.25,9.75) -- (6,9.5);
+\draw [short] (6.25,9.75) -- (6.5,9.5);
+\draw [short] (6.5,9.5) -- (6,9.5);
+\draw [short] (13.75,9.75) -- (13.5,9.5);
+\draw [short] (13.5,9.5) -- (14,9.5);
+\draw [short] (13.75,9.75) -- (14,9.5);
+\node at (13.5,9.4) [circ] {};
+\node at (14,9.4) [circ] {};
+\draw [short] (6.25,8.75) -- (6.25,8);
+\draw [short] (10,8.75) -- (10,8);
+\draw [short] (13.75,8.75) -- (13.75,8);
+\draw [line width=0.5pt, short] (13.25,9.28) -- (14.25,9.28);
+\draw [line width=0.5pt, short] (14.25,9.25) -- (14,9);
+\draw [line width=0.5pt, short] (14,9.25) -- (13.75,9);
+\draw [line width=0.5pt, short] (13.75,9.25) -- (13.5,9);
+\draw [line width=0.5pt, short] (13.5,9.25) -- (13.25,9);
+\draw [line width=0.5pt, <->, >=Stealth] (6.25,8.5) -- (10,8.5);
+\draw [line width=0.5pt, <->, >=Stealth] (10,8.5) -- (13.75,8.5);
+\draw [line width=0.5pt, <->, >=Stealth] (15.25,13.5) -- (15.25,9.75);
+\draw [short] (15,13.5) -- (15.5,13.5);
+\draw [short] (15,9.75) -- (15.5,9.75);
+\node [font=\normalsize] at (5.75,10) {A};
+\node [font=\normalsize] at (10,9.5) {B};
+\node [font=\normalsize] at (14,10) {C};
+\node [font=\normalsize] at (11.75,8.25) {L};
+\node [font=\normalsize] at (8,8.25) {L};
+\node [font=\normalsize] at (15.5,11.75) {L};
+\node [font=\normalsize] at (6,13.75) {D};
+\node [font=\normalsize] at (10,14) {E};
+\node [font=\normalsize] at (13.75,13.75) {F};
+\draw [short] (5.75,9.5) -- (6.75,9.5);
+\draw [short] (6,9.5) -- (5.75,9.25);
+\draw [short] (6.25,9.5) -- (6,9.25);
+\draw [short] (6.5,9.5) -- (6.25,9.25);
+\draw [short] (6.75,9.5) -- (6.5,9.25);
+\end{circuitikz} & Structure III: Pin- jointed truss, with hinge support at A and roller at C\\
+    \hline  
+    \end{tabularx}
+\end{table}
+\text{ }\hfill{(CE 2023)}\\
+\begin{enumerate}
+\item Structure I is unstable
+\item Structure II is unstable
+\item Structure III is unstable
+\item All three structures are stable
+\end{enumerate}
+\end{enumerate}
+\end{document}

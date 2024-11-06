@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  6 NOV 2024 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.6)  6 NOV 2024 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1147,36 +1147,14 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-(./codes/line_gen.c
-LaTeX Font Info:    Trying to load font information for OML+cmss on input line 
-1.
-LaTeX Font Info:    No file OMLcmss.fd. on input line 1.
-
-
-LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
-(Font)              using `OML/cmm/m/it' instead
-(Font)              for symbol `textless' on input line 1.
-
-LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
-6.
-LaTeX Font Info:    No file OMScmss.fd. on input line 6.
-
-LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 6.
-
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-9.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
-File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-))
-Overfull \vbox (322.19313pt too high) detected at line 238
+(./codes/line_gen.c)
+Overfull \vbox (322.19313pt too high) detected at line 252
  []
 
 [9
 
 ] (./codes/line_gen2.c)
-Overfull \vbox (90.99329pt too high) detected at line 243
+Overfull \vbox (90.99329pt too high) detected at line 257
  []
 
 [10
@@ -1184,13 +1162,13 @@ Overfull \vbox (90.99329pt too high) detected at line 243
 ] (./codes/line_gen3.c) [11
 
 ] (./codes/Question3.py)
-Overfull \vbox (376.5931pt too high) detected at line 254
+Overfull \vbox (417.39307pt too high) detected at line 268
  []
 
 [12
 
 ] (./codes/Question32.py)
-Overfull \vbox (145.39325pt too high) detected at line 259
+Overfull \vbox (186.19322pt too high) detected at line 273
  []
 
 [13
@@ -1208,36 +1186,32 @@ Overfull \vbox (145.39325pt too high) detected at line 259
 \openout8 = `main.snm'.
 
  (./main.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B4072C6CAD5A6119A87A16362EBB74BC;1090.
  ) 
 Here is how much of TeX's memory you used:
- 27391 strings out of 478287
- 520487 string characters out of 5849290
- 1300954 words of memory out of 5000000
- 44973 multiletter control sequences out of 15000+600000
- 478279 words of font info for 59 fonts, out of 8000000 for 9000
+ 27343 strings out of 478287
+ 519328 string characters out of 5849290
+ 1302000 words of memory out of 5000000
+ 44934 multiletter control sequences out of 15000+600000
+ 477364 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,131p,403b,1609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on main.pdf (14 pages, 163271 bytes).
+ 128i,19n,131p,403b,1438s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt10.pfb>
+Output written on main.pdf (14 pages, 160588 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

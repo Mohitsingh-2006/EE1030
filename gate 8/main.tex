@@ -1,0 +1,259 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+% Marks the beginning of the document
+\begin{document}
+\title{gate 8}
+\author{EE24Btech11041 - Mohit}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\begin{enumerate}
+\item If the following switching devices have similar power ratings, which one of them is the fastest?
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item SCR
+\item GTO
+\item IGBT
+\item Power MOSFET
+\end{enumerate}
+\item  A single-phase triac based AC voltage controller feeds a series RL load. The input
+AC supply is 230 V, 50 Hz. The values of R and L are $10 \ohm$ and 18.37 mH,
+respectively. The minimum triggering angle of the triac to obtain controllable output
+voltage is
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item $15^{\circ}$
+\item $30^{\circ}$
+\item $45^{\circ}$
+\item $60^{\circ}$
+\end{enumerate}
+\item Let $X$ be a discrete random variable that is uniformly distributed over the set
+\{-10, -9, \dots , 0, \dots , 9, 10\}. Which of the following random variables is/are
+uniformly distributed?
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item $X^2$
+\item $X^3$
+\item $(X-5)^2$
+\item $(X+10)^2$
+\end{enumerate}
+\item Which of the following complex functions is/are analytic on the complex plane?
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item $f(z)=Re(z)$
+\item $f(z)=Im(z)$
+\item $f(z)=e^{\abs{z}}$
+\item $f(z)=z^2-z$
+\end{enumerate}
+\item Consider the complex function $f(z)= \cos{z}+e^{z^{2}}$.The cofficient of $z^5$ in the Taylor series expansion of $f(z)$ about the origin is \rule{2cm}{0.4pt} (rounded off to 1
+decimal place).
+\hfill{(EE 2024)}
+\item The sum of the eigenvalues of the matrix $A=\myvec{1&2\\3&4}^2$ is \rule{2cm}{0.4pt} (rounded off to the nearest integer).
+\hfill{(EE 2024)}
+\item Let $X(w)$ be the Fourier transform of the signal
+\begin{align}
+x(t)=e^{-t^{4}}\cos{t},\qquad -\infty < t < \infty.
+\end{align}
+The value of the derivative of $X(w)$ at $w=0$ is \rule{2cm}{0.4pt} (rounded off to 1 decimal place).
+\hfill{(EE 2024)}
+\item The incremental cost curves of two generators (Gen A and Gen B) in a plant
+supplying a common load are shown in the figure. If the incremental cost of
+supplying the common load is Rs. 7400 per MWh, then the common load in MW is\rule{2cm}{0.4pt} (rounded off to the nearest integer).
+\hfill{(EE 2024)}
+\begin{center}
+{\scalebox{0.4}{
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\Large]
+\draw [short] (13.75,13.5) -- (13.75,-6.5);
+\draw [short] (15,13.5) -- (15,-6.5);
+\draw [short] (16.25,13.5) -- (16.25,-6.5);
+\draw [short] (17.5,13.5) -- (17.5,-6.5);
+\draw [short] (18.75,13.5) -- (18.75,-6.5);
+\draw [short] (20,13.5) -- (20,-6.5);
+\draw [short] (21.25,13.5) -- (21.25,-6.5);
+\draw [short] (22.5,13.5) -- (22.5,-6.5);
+\draw [short] (23.75,13.5) -- (23.75,-6.5);
+\draw [short] (25,13.5) -- (25,-6.5);
+\draw [short] (26.25,13.5) -- (26.25,-6.5);
+\draw [short] (27.5,13.5) -- (27.5,-6.5);
+\draw [short] (28.75,13.5) -- (28.75,-6.5);
+\draw [short] (30,13.5) -- (30,-6.75);
+\draw [short] (31.25,13.5) -- (31.25,-6.5);
+\draw [short] (32.5,13.5) -- (32.5,-6.5);
+\draw [short] (33.75,13.5) -- (33.75,-6.5);
+\draw [short] (35,13.5) -- (35,-6.5);
+\draw [short] (36.25,13.5) -- (36.25,-6.5);
+\draw [short] (36.25,-6.5) -- (13.75,-6.5);
+\draw [short] (13.75,13.5) -- (36.25,13.5);
+\draw [short] (13.75,-4) -- (36.5,-4);
+\draw [short] (36.25,-1.5) -- (13.75,-1.5);
+\draw [short] (36.25,1) -- (13.75,1);
+\draw [short] (13.75,6) -- (36.25,6);
+\draw [short] (36.25,3.5) -- (13.75,3.5);
+\draw [short] (13.75,8.5) -- (36.25,8.5);
+\draw [short] (36.25,11) -- (13.75,11);
+\node [font=\Large] at (15,-7) {0};
+\node [font=\Large] at (17.5,-7) {20};
+\node [font=\Large] at (20,-7) {40};
+\node [font=\Large] at (22.5,-7) {60};
+\node [font=\Large] at (25,-7) {80};
+\node [font=\Large] at (27.5,-7) {100};
+\node [font=\Large] at (30,-7) {120};
+\node [font=\Large] at (32.5,-7) {140};
+\node [font=\Large] at (35,-7) {160};
+\node [font=\Large] at (12.5,-6.5) {5000};
+\node [font=\Large] at (12.5,-4) {6000};
+\node [font=\Large] at (12.5,-1.5) {7000};
+\node [font=\Large] at (12.5,1) {8000};
+\node [font=\Large] at (12.5,3.5) {9000};
+\node [font=\Large] at (12.5,6) {10000};
+\node [font=\Large] at (12.5,8.5) {11000};
+\node [font=\Large] at (12.5,11) {12000};
+\node [font=\Large] at (12.5,13.5) {13000};
+\node [font=\LARGE] at (24,-8.25) {Genration (MW)};
+\node [font=\LARGE, rotate around={90:(0,0)}] at (9.25,3.5) {Incremental cost (rs/MWH))};
+\draw [line width=1.5pt, dashed] (15,-4) -- (35,11.75);
+\draw [line width=1.5pt, short] (15,1) -- (35,9);
+\node [font=\Large, rotate around={45:(0,0)}] at (31.75,10.25) {Gen B};
+\node [font=\Large] at (34.5,8) {Gen A};
+\end{circuitikz}
+}
+}
+\end{center}
+
+\item A forced commutated thyristorized step-down chopper is shown in the figure.
+Neglect the ON-state drop across the power devices. Assume that the capacitor is
+initially charged to 50 V with the polarity shown in the figure. The load current ($I_l$ ) can be assumed to be constant at 10 A. Initially, $Th_M$ is ON and $Th_A$ is OFF. The turn-off time available to $Th_M$ in microseconds, when $Th_A$ is triggered, is \rule{2cm}{0.4pt} (rounded off to the nearest integer).
+\hfill{(EE 2024)}
+
+\begin{center}
+{\scalebox{0.7}{
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw (6.25,14.75) to[battery1] (6.25,7.25);
+\draw (6.25,14.75) to[D] (20,14.75);
+\draw (17.5,7.25) to[D] (17.5,14.75);
+\draw (20,14.75) to[european resistor] (20,7.25);
+\draw (15,12.75) to[D] (12.75,12.75);
+\draw (13.25,12.75) to[L ] (11.25,12.75);
+\draw (11.25,11) to[D] (15,11);
+\draw (15,14.75) to[curved capacitor] (15,12.75);
+\draw (11.25,14.75) to[short] (11.25,11);
+\draw (15,13) to[short] (15,11);
+\draw (6.25,7.25) to[short] (20,7.25);
+\draw [->, >=Stealth] (17.5,14.75) -- (19,14.75);
+\node [font=\large] at (5,11) {50 V};
+\node [font=\large] at (6.5,11.5) {+};
+
+\node [font=\large] at (6.5,10.75) {-};
+\node [font=\large] at (14.75,14.25) {+};
+\node [font=\large] at (14.5,13.5) {-};
+\node [font=\large] at (16.25,13.75) {10 $\mu$ F};
+\node [font=\large] at (18.75,15.25) {$I_L=10 A$};
+\node [font=\large] at (12.75,15.25) {$Th_M$};
+\draw [short] (13.25,11) -- (13.5,11);
+\draw [short] (13.25,14.75) -- (13.5,15);
+\draw [short] (13.25,11) -- (13.5,11.25);
+\node [font=\large] at (13,10.25) {$Th_A$};
+\node [font=\large] at (21.5,11.5) {Constant};
+\node [font=\large] at (21.25,11) {Current};
+\node [font=\large] at (21.25,10.5) {Load};
+\end{circuitikz}
+}}
+\end{center}
+\item Consider a vector $\vec{u}=2\hat{x}+\hat{y}+2\hat{z}$, where $\hat{x},\hat{y},\hat{z}$ represent unit vectors along the coordinate axes $x,y,z$ respectively. The directional derivative of the function $f\brak{x,y,z} = 2\ln\brak{xy} +3\ln\brak{yz}+3\ln\brak{xz}$ at the point $\brak{x,y,z}=\brak{1,1,1}$ in the direction of $\vec{u}$ is
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item 0
+\item $\frac{7}{5\sqrt{2}}$
+\item 7
+\item 21
+\end{enumerate} 
+\item The input  $x\brak{t}$ and the output $y\brak{t}$ of a system are related as
+\hfill{(EE 2024)}
+\begin{align}
+y(t) = e^{-t} \int_{-infty}^{t} e^{\tau}x\brak{\tau}d\tau,\qquad -\infty < t < \infty.
+\end{align}
+The system is 
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item nonlinear.
+\item linear and time-invariant.
+\item linear but not time-invariant.
+\item noncausal.
+\end{enumerate}
+\item Consider the discrete-time systems $T_1$ and $T_2$ defined as follows:
+\begin{align}
+\{T_1x\}[n] = x[0]+x[1]+\dots+x[n]\\
+\{T_2x\}[n] = x[0]+\frac{1}{2}x[1]+\dots+\frac{1}{2^n}x[n]
+\end{align}
+Which one of the following statements is true?
+\hfill{(EE 2024)}
+\begin{enumerate}
+\item $T_1$ and $T_2$ are BIBO stable.
+\item $T_1$ and $T_2$ are not BIBO stable.
+\item $T_1$ is BIBO stable and $T_2$ is not BIBO stable.
+\item $T_1$ is not BIBO stable and $T_2$ is BIBO stable.
+\end{enumerate}
+\item If the Z-transform of a finite-duration discrete-time signal $x[n]$ is $X\brak{z}$, then the  Z-transformation of the signal $y[n]=x[2n]$ is
+ \hfill{(EE 2024)}
+\begin{enumerate}
+\item $Y\brak{z}=X(z^{2})$
+\item $Y\brak{z}=\frac{1}{2}[X(z^{-\frac{1}{2}})+X(-z^{-\frac{1}{2}})]$
+\item $Y\brak{z}=\frac{1}{2}[X(z^{\frac{1}{2}})+X(-z^{\frac{1}{2}})]$
+\item $Y\brak{z}=\frac{1}{2}[X(z^{2})+X(-z^{2})]$
+\end{enumerate}
+\end{enumerate}
+\end{document}
